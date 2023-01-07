@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2OR-Unit-6-04-EXTRA/sw.js", {
+    scope: "/ICS2OR-Unit-6-04-EXTRA/",
   })
 }
 
@@ -19,22 +19,26 @@ if (navigator.serviceWorker) {
  * This function displays an alert.
  * Math
  */
-function calculate() {
+window.onload = function () {
+  const params = new URLSearchParams(document.location.search)
+
   // input
-  const a = parseInt(document.getElementById("textbox-a").value)
-  const b = parseInt(document.getElementById("textbox-b").value)
-  const c = parseInt(document.getElementById("textbox-c").value)
+  const length = params.get("L")
+  console.log(length)
+  const width = params.get("W")
+  console.log(width)
+  const height = params.get("H")
+  console.log(height)
 
   // process
-  const math = a + b + c
-  // output
-  document.getElementById("math").innerHTML = "Numbers: " + math + " units"
-}
+  const volume  = (length * width * height) / 3
+  const dimension1 = "<ul>\n<li>r = " + length + "</li>\n</ul>"
+  const dimension2 = "<ul>\n<li>r = " + width + "</li>\n</ul>"
+  const dimension3 = "<ul>\n<li>r = " + height + "</li>\n</ul>"
 
-/**
- * This function displays an alert.
- * Words
- */
-function button() {
-  document.getElementById("words").innerHTML = "<p>Hello, World!</p>"
+
+  // output
+  document.getElementById("dimension").innerHTML = dimensions
+  document.getElementById("volume").innerHTML =
+    "The volume is: " + volume.toFixed(2) + " cm³!"
 }
