@@ -31,11 +31,10 @@ window.onload = function () {
   console.log(height)
 
   // process
-  const volume  = (length * width * height) / 3
+  const volume = (length * width * height) / 3
   const dimension1 = "<ul>\n<li>r = " + length + "</li>\n</ul>"
   const dimension2 = "<ul>\n<li>r = " + width + "</li>\n</ul>"
   const dimension3 = "<ul>\n<li>r = " + height + "</li>\n</ul>"
-
 
   // output
   document.getElementById("dimension").innerHTML = dimensions
