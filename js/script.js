@@ -37,7 +37,9 @@ window.onload = function () {
   const dimension3 = "<ul>\n<li>r = " + height + "</li>\n</ul>"
 
   // output
-  document.getElementById("dimension").innerHTML = dimensions
+  document.getElementById("dimension1").innerHTML = dimensions
+  document.getElementById("dimension2").innerHTML = dimensions
+  document.getElementById("dimension2").innerHTML = dimensions
   document.getElementById("volume").innerHTML =
     "The volume is: " + volume.toFixed(2) + " cm³!"
 }
