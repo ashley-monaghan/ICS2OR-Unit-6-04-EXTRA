@@ -28,7 +28,7 @@ window.onload = function () {
 
   // process
   const volume = length ** 3
-  const dimension = "<ul>\n<li>r = " + length + "</li>\n</ul>"
+  const dimension = "<ul>\n<li>a = " + length + "</li>\n</ul>"
 
   // output
   document.getElementById("dimension").innerHTML = dimension
